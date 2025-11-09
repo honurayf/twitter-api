@@ -24,6 +24,9 @@ public class Retweet {
     @Column(name = "create_date")
     private Date createDate;
 
+    @Column(name = "tweet_no")
+    private Long tweetNo;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
