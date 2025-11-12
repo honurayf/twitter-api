@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.saveAndFlush(user);
         userResponseDTO.setUserId(savedUser.getId());
         userResponseDTO.setIsSuccess(Boolean.TRUE);
+        userResponseDTO.setMessage("Kullanıcı başarı ile oluşturuldu.");
         return userResponseDTO;
     }
 

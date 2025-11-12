@@ -17,7 +17,7 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public UserResponse saveUser(UserRequest userRequest) {
+    public UserResponse saveUser(@RequestBody UserRequest userRequest) {
         UserResponse userResponse = new UserResponse();
         UserResponseDTO dto = userService.save(userRequest.getUserDTO());
         userResponse.setUserDTO(dto);
